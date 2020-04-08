@@ -1,13 +1,72 @@
 .documents {
   display: flex;
-  width: 400px;
+  width: 600px;
   height: 400px;
   .dropzone {
     flex: 1;
     height: 100%;
+    .dropzone_label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 139px;
+        height: 121px;
+      }
+      .dropzone_title {
+        font-size: 15.71px;
+        font-weight: bold;
+        letter-spacing: 0.15px;
+        line-height: 24px;
+        color: rgba(0,0,0,0.87);
+      }
+      .dropzone_subtitle {
+        font-size: 15.71px;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        color: rgba(0,0,0,0.6);
+      }
+    }
+  }
+  .spacer {
+    width: 25px;
   }
   .files {
     flex: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    .files_title {
+      font-size: 15.71px;
+      font-weight: bold;
+      letter-spacing: 0.15px;
+      line-height: 24px;
+      color: rgba(0,0,0,0.87);
+    }
+    .files_scroll {
+      flex: 1;
+      overflow-y: auto;
+      .files_one {
+        padding: 16px 0;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #D8D8D8;
+        .file_info {
+          display: flex;
+          flex-direction: row;
+        }
+        .file_description {
+          font-size: 13.75px;
+          letter-spacing: 0.25px;
+          line-height: 20px;
+          color: rgba(0,0,0,0.87);
+        }
+        .file_textarea {
+          height: 72px;
+          border-radius: 4px;
+          padding: 8px;
+        }
+      }
+    }
   }
 }

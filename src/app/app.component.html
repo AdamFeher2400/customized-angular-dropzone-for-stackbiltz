@@ -1,9 +1,22 @@
 <div class="documents">
 	<ngx-dropzone (change)="onSelect($event)" class="dropzone">
-		<ngx-dropzone-label>
-			<img src="assets/upload_icon.png" >
-    Drop it, baby!
+		<ngx-dropzone-label class="dropzone_label">
+			<img src="https://raw.githubusercontent.com/AdamFeher2400/customized-angular-dropzone-for-stackbiltz/master/src/assets/upload_icon.png" >
+      <span class="dropzone_title">Drag and drop your files here!</span>
+      <span class="dropzone_subtitle">or</span>
+      <button>Browse Files</button>
     </ngx-dropzone-label>
 	</ngx-dropzone>
-	<div class="files" *ngIf="files.length > 0"></div>
+  <div class="spacer" *ngIf="files.length >= 0"></div>
+	<div class="files" *ngIf="files.length >= 0">
+    <span class="files_title">Uploading</span>
+    <div class="files_scroll">
+      <div class="files_one">
+        <span class="file_description">Add a description</span>
+        <div class="file_info">
+        </div>
+        <textarea class="file_textarea" placeholder="Description"></textarea>
+      </div>
+    </div>
+  </div>
 </div>
