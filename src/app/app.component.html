@@ -2,22 +2,33 @@
 	<ngx-dropzone (change)="onSelect($event)" class="dropzone">
 		<ngx-dropzone-label class="dropzone_label">
 			<img src="https://raw.githubusercontent.com/AdamFeher2400/customized-angular-dropzone-for-stackbiltz/master/src/assets/upload_icon.png" >
-      <span class="dropzone_title">Drag and drop your files here!</span>
-      <span class="dropzone_subtitle">or</span>
-      <button>Browse Files</button>
-    </ngx-dropzone-label>
+			<span class="dropzone_title">Drag and drop your files here!</span>
+			<span class="dropzone_subtitle">or</span>
+			<button>Browse Files</button>
+		</ngx-dropzone-label>
 	</ngx-dropzone>
-  <div class="spacer" *ngIf="files.length >= 0"></div>
-	<div class="files" *ngIf="files.length >= 0">
-    <span class="files_title">Uploading</span>
-    <div class="files_scroll">
-      <div class="files_one">
-        <span class="file_description">Add a description</span>
-        <div class="file_info">
-          <img src="https://raw.githubusercontent.com/AdamFeher2400/customized-angular-dropzone-for-stackbiltz/master/src/assets/image_attach.png">
+	<div class="spacer" *ngIf="files.length > 0"></div>
+	<div class="files" *ngIf="files.length > 0">
+		<span class="files_title">Uploading</span>
+		<div class="files_scroll">
+			<div class="files_one" *ngFor="let file of files">
+				<div class="file_info">
+					<img src="https://raw.githubusercontent.com/AdamFeher2400/customized-angular-dropzone-for-stackbiltz/master/src/assets/image_attach.png">
+					<div class="file_detail">
+						<div class="file_detail_menu">
+							<span class="file_name">12312312131313131313131323123123</span>
+							<span class="file_size">190.5MB</span>
+						</div>
+            <div class="file_progress"></div>
+					</div>
+				</div>
+        <div class="file_upload_speed">
+          <span>55% Done</span>
+          <span>90 KB/sec</span>
         </div>
-        <textarea class="file_textarea" placeholder="Description"></textarea>
-      </div>
-    </div>
-  </div>
+				<span class="file_description">Add a description</span>
+				<textarea class="file_textarea" placeholder="Description"></textarea>
+			</div>
+		</div>
+	</div>
 </div>

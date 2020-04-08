@@ -46,8 +46,11 @@
     .files_scroll {
       flex: 1;
       overflow-y: auto;
+      .files_one:last-child {
+        border: none;
+      }
       .files_one {
-        padding: 16px 0;
+        padding: 16px 8px 16px 0;
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid #D8D8D8;
@@ -55,9 +58,62 @@
           display: flex;
           flex-direction: row;
           img {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             object-fit: contain;
+          }
+          .file_detail {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 16px;
+            .file_detail_menu {
+              font-size: 13.75px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              span {
+                color: rgba(0,0,0,0.6);
+                flex: 1;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+              .file_name {
+                letter-spacing: 0.1px;
+                line-height: 24px;
+              }
+              .file_size {
+                letter-spacing: 0.25px;
+                line-height: 20px;
+                margin-left: 16px;
+              }
+            }
+            .file_progress{
+              height: 8px;
+              width: 100%;
+              border-radius: 4px;
+              background-color: #1DA1F2;
+            }
+          }
+        }
+        .file_upload_speed {
+          display: flex;
+          flex-direction: row;
+          margin-left: 44px;
+          margin-top: 4px;
+          span {
+            font-size: 11.78px;
+            letter-spacing: 0.4px;
+            line-height: 16px;
+            color: rgba(0,0,0,0.6);
+          }
+          span:first-child {
+            flex: 1;
+            text-align: left;
+          }
+          span:last-child {
+            flex: 1;
+            text-align: right;
           }
         }
         .file_description {
