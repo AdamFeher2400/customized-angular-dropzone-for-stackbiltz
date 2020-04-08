@@ -54,6 +54,11 @@
         .file_info {
           display: flex;
           flex-direction: row;
+          img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+          }
         }
         .file_description {
           font-size: 13.75px;
