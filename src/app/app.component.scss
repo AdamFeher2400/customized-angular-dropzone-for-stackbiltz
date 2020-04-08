@@ -1,0 +1,13 @@
+.documents {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  .dropzone {
+    flex: 1;
+    height: 100%;
+  }
+  .files {
+    flex: 1;
+    height: 100%;
+  }
+}
