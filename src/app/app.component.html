@@ -16,8 +16,8 @@
 					<img src="https://raw.githubusercontent.com/AdamFeher2400/customized-angular-dropzone-for-stackbiltz/master/src/assets/image_attach.png">
 					<div class="file_detail">
 						<div class="file_detail_menu">
-							<span class="file_name">12312312131313131313131323123123</span>
-							<span class="file_size">190.5MB</span>
+							<span class="file_name">{{file.name}}</span>
+							<span class="file_size">{{getFileSize(file.size)}}</span>
 						</div>
             <div class="file_progress"></div>
 					</div>
